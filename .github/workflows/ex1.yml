@@ -15,4 +15,16 @@ jobs:
           node-version: latest
       - name: install node.js
         run: npm install
-      
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps: 
+      # TO COMPLETE  
+      - name: check out
+        uses: actions/checkout@v4 
+      - name: deploy node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - name: install node.js
+        run: npm test    
