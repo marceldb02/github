@@ -5,12 +5,8 @@ on:
 jobs:
   create-issue:
     runs-on: ubuntu-latest
-    steps:
-    
-  create-issue:
-    runs-on: Github-API
     steps:  
-    run: | 
+      run: | 
             curl --request POST \
             --url https://api.github.com/repos/<specify your repo with github context>/issues \
             --header 'authorization: Bearer <specify github token>' \
