@@ -14,5 +14,5 @@ jobs:
         with:
           node-version: latest
       - name: install 
-        uses: npm install
+        run: npm install
       
