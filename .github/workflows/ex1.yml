@@ -15,8 +15,6 @@ jobs:
           node-version: latest
       - name: install node.js
         run: npm install
-      - name: install test
-        run: npm test
   job2:
     needs: job1
     runs-on: ubuntu-latest
@@ -29,4 +27,6 @@ jobs:
         with:
           node-version: latest
       - name: install node.js
-        run: npm test    
+        run: npm install
+      - name: install test
+        run: npm test   
