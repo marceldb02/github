@@ -1,0 +1,21 @@
+name: npm test
+on: 
+  workflow_dispatch:
+               
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps: 
+      # TO COMPLETE  
+      - name: check out
+        uses: actions/checkout@v4 
+      - name: install node.js
+        uses: actions/setup-node@v4
+           with:
+            # Version Spec of the version to use in SemVer notation.
+            # It also emits such aliases as lts, latest, nightly and canary builds
+            # Examples: 12.x, 10.15.1, >=10.15.0, lts/Hydrogen, 16-nightly, latest, node
+            node-version: latest
+      - name: install 
+        uses: npm install
+      
